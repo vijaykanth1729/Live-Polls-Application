@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+
+
+{% block content %}
+<div class="container">
+    <h1 class="text-center">Edit poll using the below form!!</h1>
+    <div class="row">
+        <div class="col-sm-6 offset-sm-3">
+
+            <form method="post">
+                {% csrf_token %}
+                {% for field in form %}
+                <div class="form-group">
+                    {{ field.errors }}
+                    {{ field.label_tag }} {{ field }}
+                </div>
+                {% endfor %}
+                <input type="submit" value="Submit" class="btn btn-primary"/>
+                <a href="{% url 'polls:add_choice' poll.id %}" class="btn btn-warning">Add Choice</a>
+                <a href="{% url 'polls:poll_confirm_delete' poll.id %}"  class="btn btn-danger">
+                    <i style="margin-right: 2px" class="fa fa-trash" style="font-size:20px;color:red"></i>
+                    Delete Poll</a>
+            </form>
+            <h3 class="text-center">Choices!</h3>
+            {% for choice in poll.choice_set.all %}
+            <p><a href="{% url 'polls:edit_choice' choice.id %}"><i class="fa fa-edit" style="font-size:20px;color:hotpink"></i></a>{{choice.choice_text}}</p>
+            {% endfor %}
+        </div>
+
+    </div>
+</div>
+{% endblock %}

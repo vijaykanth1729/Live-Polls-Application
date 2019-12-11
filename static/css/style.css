@@ -1,0 +1,14 @@
+h1,h3 {
+    color: darkorange;
+}
+
+body {
+    background-image: url('../img/image3.jpg');
+    background-repeat: no-repeat;
+    background-size: 2000px 2000px;
+}
+#home-content {
+    text-align: center;
+    padding-top: 20%;
+}
+

@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block login_css %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/style3.css' %}">
+{% endblock %}
+
+
+{% block content %}
+<div class="container">
+    <div class="row ">
+        <div class="col-md-6 offset-md-3 text-center">
+            {% if messages %}
+
+                {% for message in messages %}
+                <h5  style="color:maroon">
+                    {% if message.tags %}
+
+                    {{ message }}
+                    {% endif %}
+
+                </h5>
+                {% endfor %}
+
+            {% endif %}
+
+            <div class="login-form">
+                <form method="post">
+                    {% csrf_token %}
+                    <img src="{% static 'img/men.jpg' %}" alt="John Doe" class="mr-3 mt-3 rounded-circle" style="width:90px;">
+                    <h4 class="modal-title">Login to Your Account</h4>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Username" required="required" name="username">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control" placeholder="Password" required="required" name="password">
+                    </div>
+                    <div class="form-group small clearfix">
+                        <label class="checkbox-inline"><input type="checkbox"> Remember me</label>
+                        <a href="#" class="forgot-link">Forgot Password?</a>
+                    </div>
+                    <input type="submit" class="btn btn-primary btn-block btn-lg" value="Login">
+                </form>
+                <div class="text-center small">Don't have an account? <a href="{% url 'accounts:register' %}">Sign up</a></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

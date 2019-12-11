@@ -1,0 +1,28 @@
+body {
+    background-color: white;
+    background-repeat: no-repeat;
+    background-size: 2000px 2000px;
+}
+li {
+    color:red;
+}
+
+.error {
+    color: red;
+}
+
+.form-container{
+
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px #000;
+}
+
+.bg{
+
+    background: url('../img/lake.jpg') no-repeat;
+    width: 100px;
+    height: 100vh;
+    background-size: 100%;
+}

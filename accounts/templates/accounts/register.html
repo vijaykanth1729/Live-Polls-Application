@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block login_css %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/style4.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            {% if messages %}
+            {% for message in messages %}
+            <h5 style="color:red">
+                {% if message.tags %}
+                {{ message }}
+                {% endif %}>
+            </h5>
+            {% endfor %}
+
+            {% endif %}
+            <p class="text-center">Already have an account: <a href="{% url 'accounts:login' %}">Login Here!</a></p>
+            <div class="signup-form">
+                <form method="post">
+                    {% csrf_token %}
+                    <h2>Create Account</h2>
+                    {% for field in form %}
+                    <div class="form-group">
+                        {{ field.errors }}
+                        {{ field.label_tag }} {{ field }}
+                    </div>
+                    {% endfor %}
+                    <input type="submit" value="Sign Up" class="btn btn-primary"/>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+        {% endblock %}

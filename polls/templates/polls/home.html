@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block custom_css %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+{% endblock %}
+
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <div id="home-content">
+                <h1>Poll Me -- Get Started</h1>
+                <h3>Your voice matters!</h3>
+                <hr>
+                {% if request.user.is_authenticated %}
+                <a href="{% url 'polls:list' %}"><button type="button" class="btn btn-danger btn-large">Polls-List-Here!!</button></a>
+                {% else %}
+                <a href="{% url 'accounts:login' %}"><button type="button" class="btn btn-danger btn-large">Get Started</button></a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
