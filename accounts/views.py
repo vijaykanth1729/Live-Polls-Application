@@ -29,7 +29,7 @@ def register_user(request):
             username = form.cleaned_data['username']
             email = form.cleaned_data['email']
             password = form.cleaned_data['password1']
-            human = True
+            #human = True
             user = User.objects.create_user(username=username,email=email, password=password)
             messages.success(request,"Thanks for registering with us {}".format(user.username))
             return redirect('accounts:login')

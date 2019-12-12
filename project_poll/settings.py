@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'polls',
     'accounts',
-    'captcha',
+    #'captcha',
 ]
 
 

@@ -1,7 +1,7 @@
 from django import forms
 from django.contrib.auth.models import User
 from django.core.exceptions import ValidationError
-from captcha.fields import CaptchaField
+#from captcha.fields import CaptchaField
 
 
 
@@ -18,7 +18,7 @@ class UserRegistrationForm(forms.Form):
                                 max_length=20,
                                 min_length=5,
                                 widget=forms.PasswordInput(attrs={'class':'form-control'}))
-    captcha = CaptchaField()
+    #captcha = CaptchaField()
 
     def clean_username(self):
         username = self.cleaned_data['username']
