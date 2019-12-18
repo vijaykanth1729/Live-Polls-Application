@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '(8itv89#9m7ymo5gt*fbws=o2_1*d28js6pgt5fm&+9f^d9#qu'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = []
 
@@ -40,9 +40,10 @@ INSTALLED_APPS = [
     'polls',
     'accounts',
     #'captcha',
+    'crispy_forms',
 ]
 
-
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -127,4 +128,13 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
 ]
 
+
 django_heroku.settings(locals())
+
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'personalvijay007@gmail.com'
+EMAIL_HOST_PASSWORD = 'xjdrgktqmtaickkb'
