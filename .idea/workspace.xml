@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7c562461-cb48-414a-a0a0-ebfd2e008353" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/project_poll/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/project_poll/settings.py" afterDir="false" />
-    </list>
+    <list default="true" id="7c562461-cb48-414a-a0a0-ebfd2e008353" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,6 +12,7 @@
     <session id="1853994312">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
+          <entry key="project.closed" value="1" />
           <entry key="project.open.time.5" value="1" />
           <entry key="project.opened" value="1" />
         </counts>
@@ -188,10 +187,10 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21970496" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21970496" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="0" visible="true" weight="0.3286334" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="0" visible="true" weight="0.3286334" />
       <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="2" weight="0.32936078" />
       <window_info anchor="bottom" id="Message" order="3" />
